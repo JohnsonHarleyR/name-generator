@@ -3,5 +3,25 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+{% comment %} Trying it with Alpine {% endcomment %}
+<div x-data="{selectedName: 'New Name', names: ['Harley', 'Brian', 'Jessica', 'Peter', 'Angel', 'Meagan', 'Monet', 'Bob', 'Jeremiah', 'Tom']}">
+    <h1 x-text="selectedName"></h1>
+    <p>Generate one simple random name...</p>
+    <button @click="() => selectedName = getRandom(names);">One Name</button>
+
+    {% comment %} Doing something even cooler {% endcomment %}
+     <p>
+        Or generate a full name with a gender!
+    </p>
+    <p>
+        <input type="radio" id="male" name="name_type" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="name_type" value="female" checked="checked">
+        <label for="female">Female</label>
+    </p>
+
+    <button @click="() => selectedName = getFullName();">Full Name</button>
+</div>
+
+
+<script src="/js/utilities.js"></script>
