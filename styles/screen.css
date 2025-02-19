@@ -1,20 +1,39 @@
+:root {
+    --btn-color: #00d7ff;
+    --txt-color: #EAE8FF;
+    --bg-color: #2D3142;
+}
+
 body {
     font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
+    color: var(--txt-color);
+    background: var(--bg-color);
     padding: 0 40px;
     text-align: center;
+    font-size: 20px;
+    margin-bottom: 100px;
 }
 
 h1 {
-    font-size: 8em;
+    font-size: 7em;
     letter-spacing: -2px;
     margin-bottom: 0;
 }
 
-h1 strong {
-    background: rgb(34, 193, 195);
-    background: linear-gradient(45deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+button {
+    padding: 15px;
+    background-color: var(--btn-color);
+    border-radius: 10px;
+    color: var(--bg-color);
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    border: none;
+}
+
+button:hover {
+    background-color: #008da7;
+    color: var(--txt-color);
+    cursor: pointer;
 }
